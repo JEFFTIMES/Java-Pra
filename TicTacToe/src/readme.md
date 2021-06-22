@@ -1,6 +1,6 @@
-##basic logic
+## basic logic
 
-###initiating
+### initiating
 
 1. The *main()* method starts an initialize() method to inquery information for the the initiating parameters of the game. 
         players' type;
@@ -14,7 +14,7 @@
    
 5. *gameBoard* places the first player the *activePlayer*, then call *runningGame()* method to entering the game looping.
 
-###runningGame() looping
+### runningGame() looping
 
 in the runningGame() method, build a loop to repeat the following actions until the checkingWinStatus() return true.
 
@@ -29,6 +29,6 @@ in the runningGame() method, build a loop to repeat the following actions until 
 5. after any placement, call checkWinStatus() to check the status. if current player won or there is not available places for next move, update the winner and return true to break the looping.else swithes the activeToke to another player, keep the looping.
 
 
-###closing
+### closing
 if checkWinStatus() return true to breaks the looping, print out the winner and quit. 
 
