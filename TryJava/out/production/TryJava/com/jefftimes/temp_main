@@ -1,0 +1,124 @@
+// Create a myCar object
+        //Car myCar = new Car();
+
+        // Call the honk() method (from the Vehicle class) on the myCar object
+        //myCar.honk();
+
+        // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+        //System.out.println(myCar.brand + " " + myCar.getModel());
+
+        //System.out.println("Enter filename");
+        //Scanner inputTyping = new Scanner(System.in);  // Create a Scanner object
+
+
+        //String fileName = inputTyping.nextLine();  // Read user input
+        //System.out.println("Create a new file: " + fileName);  // Output user input
+
+        //CreateFile createAFile = new CreateFile();
+        //createAFile.createFile(fileName);
+
+        // declare a interface variable to store the lambda expression.
+        InterfaceStringConcat lambdaVar = (x, y) -> x + y;
+
+        // instantiating an instance of ConcatStringWithLambda
+        ConcatStringWithLambda ConcatStr = new ConcatStringWithLambda();
+
+        //call the method which takes the function as a parameter, assign the lambda expr stored in the lambdaVar.
+        String string = ConcatStr.concatString("Hello ","World ", lambdaVar);
+
+        //call the method witch takes the function as a parameter, assign a lambda expr to it.
+        String str1 = ConcatStr.concatString("你好 ", "Java ", (m, n) -> m + n);
+
+        //call the method which takes the function as a parameter, assign the lambda expression stored in the attribute.
+        String str2 = ConcatStr.concatString("欢迎 ", "光临 ", ConcatStr.lambdaAttr);
+
+        System.out.println(string + str1 + str2);
+
+
+        /* try InnerClass and NestedClass
+        Invoice invoiceItem = new Invoice();
+
+        invoiceItem.addItem("Nike Shoes", 2, 120.0);
+        invoiceItem.addItem("Adidas pants", 1, 50.0);
+        invoiceItem.addItem("Nike Shoes", 2, 120.0);
+        invoiceItem.iterInvoiceItems();
+
+        Invoice.PublicItem newPubItem = new Invoice.PublicItem("PEAK T-Shirt", 1, 80.0);
+        invoiceItem.add(newPubItem);
+        invoiceItem.iterInvoicePubItems();
+
+
+        SocialNetwork myNetwork = new SocialNetwork();
+        SocialNetwork.Member jeff = myNetwork.enroll("Jeff");
+        SocialNetwork.Member lily = myNetwork.enroll("Lily");
+
+        jeff.addFriend(lily);
+        lily.addFriend(jeff);
+        myNetwork.iterMembers();
+        //jeff.iterFriends();
+        //jeff.deleteFriend(lily);
+        //jeff.iterFriends();
+        jeff.quit();
+        jeff.iterFriends();
+        myNetwork.iterMembers();
+
+        */
+        //Assign instance of the implementing class to variables of the interface type.
+        //the IntSequence is the supertype of the SquareSequence.
+        //IntSequence squareSeq = new SquareSequence();
+
+        //Cast the type of the variable to the subclass.
+        //SquareSequence castSeq = (SquareSequence) squareSeq;
+
+        //Call the static method of the interface.
+        //double avg = IntSequence.average(castSeq,10);
+        //System.out.println(avg);
+
+
+        Employee jeff = new Employee("Jeff");
+        Employee ben = new Employee("Benjamin");
+        Employee victor = new Employee("Victor");
+
+        ArrayList <Employee> myEmployees = new ArrayList<>();
+        myEmployees.add(jeff);
+        myEmployees.add(ben);
+        myEmployees.add(victor);
+
+
+        for (Employee thisEmployee : myEmployees) {
+            System.out.println(thisEmployee.name);
+            System.out.println(thisEmployee.getEmployeeID());
+            System.out.println(thisEmployee.getLastID());
+
+        }
+
+        int i = jeff.compareTo(ben);
+        int j = victor.compareTo(jeff);
+
+        System.out.println( "j:b = " + i + "\tv:j = " + j);
+
+
+       // instantiating a comparator.
+        employeeComparator comparator = new employeeComparator();
+
+
+        System.out.println("compare: " + comparator.compare(jeff,ben));
+
+        //sort with the reference of the compareTo() method.
+        myEmployees.sort(Employee::compareTo);
+        for (Employee thisEmployee : myEmployees) {
+
+            System.out.println(thisEmployee.name);
+        }
+
+
+        //sort with the reference of the compare() method.
+        myEmployees.sort(comparator);
+        for (Employee thisEmployee : myEmployees) {
+
+            System.out.println(thisEmployee.name);
+        }
+
+        //tryRunnable task = new tryRunnable();
+        //Thread thread = new Thread(task);
+        //thread.start();
